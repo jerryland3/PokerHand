@@ -11,7 +11,6 @@
  * @author Jerry Wang
  */
 #include "Card.h"
-#include "PokerRanks.h"
 #include "PokerRankUtils.h"
 #include <array>
 #include <string>
