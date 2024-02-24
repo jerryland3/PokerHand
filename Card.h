@@ -19,6 +19,7 @@
 
 class Card {
 public:
+
 	/**
 	 * @brief Constructs a Card object from a string representation of a card.
 	 *
@@ -29,7 +30,7 @@ public:
 	 * 'D' for diamonds, and 'C' for clubs.
 	 *
 	 * @param card The string representation of the card.
-	 * @throw std::invalid_argument If the card string has an invalid length, value, or suit.
+	 * @throw invalid_argument if the string does not represent a valid card.
 	 */
 	Card(std::string card) {
 		// check the string length

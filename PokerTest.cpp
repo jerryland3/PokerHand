@@ -19,4 +19,13 @@ int main() {
 	// test different poker hand ranks
 	PokerHand royalFlush("10H", "JH", "QH", "KH", "AH");
 	royalFlush.printHand();
+
+	try {
+		PokerHand invalidHand("10H", "JH", "QH", "KH", "AH");
+	}
+	catch (const invalid_argument& e) {
+		cout << e.what() << endl;
+	}
+	PokerHand straightFlush("2H", "3H", "4H", "5H", "6H");
+	straightFlush.printHand();
 }
