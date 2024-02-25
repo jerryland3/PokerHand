@@ -19,7 +19,6 @@
 
 class Card {
 public:
-
 	/**
 	 * @brief Constructs a Card object from a string representation of a card.
 	 *
@@ -33,7 +32,6 @@ public:
 	 * @throw invalid_argument if the string does not represent a valid card.
 	 */
 	Card(std::string card) {
-		// check the string length
 		if (card.length() != 2) {
 			throw std::invalid_argument("Invalid card string length");
 		}

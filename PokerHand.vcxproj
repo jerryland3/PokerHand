@@ -130,6 +130,7 @@
     <ClCompile Include="PokerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.h" />
     <ClInclude Include="PokerHand.h" />
     <ClInclude Include="PokerRanks.h" />
     <ClInclude Include="PokerRankUtils.h" />

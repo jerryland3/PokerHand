@@ -84,22 +84,23 @@ public:
 	 * @param hand2 The other poker hand to compare with.
 	 * @return A string indicating which hand is higher.
 	 */
-	std::string compareHand(PokerHand hand2) {
+	void compareHand(PokerHand hand2) {
 
 		// Print the original hands to the console.
-		std::cout << "First Hand : " << originalHand << std::endl;
+		std::cout << "First Hand : " << originalHand << " Rank: " << PokerRankUtils::rankToString(rank) << " (" << static_cast<std::underlying_type<PokerRanks>::type>(rank) << ")" << std::endl;
 
-		std::cout << "Second Hand : " << hand2.originalHand << std::endl;
+		std::cout << "Second Hand : " << hand2.originalHand << " Rank: " << PokerRankUtils::rankToString(hand2.rank) << " (" << static_cast<std::underlying_type<PokerRanks>::type>(hand2.rank) << ")" << std::endl;
+		std::cout << "Second Hand : " << hand2.originalHand << " Rank: " << PokerRankUtils::rankToString(hand2.rank) << " (" << static_cast<std::underlying_type<PokerRanks>::type>(hand2.rank) << ")" << std::endl;
 
 		// Return the result of the comparison.
 		if (rank > hand2.rank) {
-			return "First hand is higher";
+			std::cout << "First hand is higher\n" << std::endl;
 		}
 		else if (rank < hand2.rank) {
-			return "Second hand is higher";
+			std::cout << "Second hand is higher\n" << std::endl;
 		}
 		else {
-			return compareSameRank(hand2); // If the ranks are the same, compare the hands.
+			compareSameRank(hand2); // If the ranks are the same, compare the hands.
 		}
 	}
 
@@ -122,17 +123,19 @@ private:
 	 * @param hand2 The other poker hand to compare with.
 	 * @return A string indicating which hand is higher.
 	 */
-	std::string compareSameRank(PokerHand hand2) {
+	void compareSameRank(PokerHand hand2) {
 		// loop through the hand and compare the value of the cards
 		for (size_t i = 0; i < 5; i++) {
 			if (hand[i].getValue() > hand2.hand[i].getValue()) {
-				return "First hand is higher";
+				std::cout << "First hand is higher\n" << std::endl;
+				return;
 			}
 			else if (hand[i].getValue() < hand2.hand[i].getValue()) {
-				return "Second hand is higher";
+				std::cout << "Second hand is higher\n" << std::endl;
+				return;
 			}
 		}
-		return "both hand have the same rank and same ranking cards";
+		std::cout << "both hand have the same rank and same ranking cards" << std::endl;;
 	}
 
 	/**
