@@ -135,9 +135,6 @@
     <ClInclude Include="PokerRanks.h" />
     <ClInclude Include="PokerRankUtils.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="PokerHand.sln" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
